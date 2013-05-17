@@ -6,7 +6,7 @@ html {
 header {
   background: #5A5F5D;
   width: 100%;
-  height: 145px;
+  height: 105px;
   padding: 20px 0;
 }
 
@@ -48,7 +48,7 @@ header h1 {
   font-size: 90px;
   color: #8D9391;
   position: relative;
-  bottom: 60px;
+  bottom: 100px;
 }
 
 .container h1 {
@@ -103,44 +103,3 @@ input.textbox {
   width: 550px;
   margin: 0 0 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

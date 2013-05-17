@@ -33,8 +33,3 @@ post '/answer' do
 
   erb :answer
 end
-
-# get '/results' do
-
-#   session[:round_id] = nil
-# end

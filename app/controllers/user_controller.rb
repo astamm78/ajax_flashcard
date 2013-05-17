@@ -24,6 +24,7 @@ post '/sign_up' do
   @user = User.create(:full_name => params[:full_name],
                       :email => params[:email],
                       :password => params[:password])
+  session[:user_id] = @user.id
   erb :user
 end
 
