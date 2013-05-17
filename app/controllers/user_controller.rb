@@ -4,7 +4,7 @@ end
 
 get '/sign_in' do
   erb :signin
-end 
+end
 
 get '/user_page' do
   erb :user

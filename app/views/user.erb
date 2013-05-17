@@ -13,9 +13,9 @@
     <input type="submit" value="start">
   </form>
 
-  <h2>Your results, deal with it</h2>
+  <h2>Your results, deal with it:</h2>
   <%current_user.get_stats.each do |set|%>
-  <strong><%= set[0] %></strong>: <span class="round_percentage"><%= set[1] %></span><br>
+  <p class="result"><strong><%= set[0] %></strong>: <span class="round_percentage"><%= set[1] %></span></p>
   <%end%>
   <p><a href="/logout">Sign Out.</a></p>
 

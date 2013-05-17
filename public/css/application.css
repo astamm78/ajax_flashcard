@@ -1,9 +1,146 @@
+html {
+  background: #A4D5C5;
+  color: white;
+}
+
+header {
+  background: #5A5F5D;
+  width: 100%;
+  height: 145px;
+  padding: 20px 0;
+}
+
+h1, h2, h3, h4, h5, h6, header p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: #8D9391;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav_cont {
+  margin: 0 auto;
+  width: 720px;
+}
+
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+  width: 720px;
 }
-th {
-  text-align: left;
+
+header p {
+  float: left;
+  margin: 0 24px 0 0;
+  font-size: 24px;
+  vertical-align: bottom;
+  height: 145px;
 }
+
+header h1 {
+  clear: both;
+  font-size: 90px;
+  color: #8D9391;
+  position: relative;
+  bottom: 60px;
+}
+
+.container h1 {
+  font-size: 90px;
+  margin: 0 0 30px;
+}
+
+.container h2 {
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+
+.container h3 {
+  font-size: 50px;
+  margin: 0 0 20px;
+  padding: 30px 0 0;
+}
+
+.container h4 {
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+
+.container p {
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+
+.container ul li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+  font-size: 28px;
+}
+
+form {
+  margin: 0 0 30px;
+}
+
+select {
+  border:0;
+  height:42px;
+  width:350px;
+}
+
+input {
+  height: 42px;
+  width: 150px;
+}
+
+input.textbox {
+  width: 550px;
+  margin: 0 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

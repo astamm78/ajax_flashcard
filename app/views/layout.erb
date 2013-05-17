@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
+
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
+
   <link rel="stylesheet" href="/css/application.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Team VIM!</title>
 </head>
+
 <body>
 
-  <nav class="container">
-    <p><a href="/">Home</a></p>
-    <% if current_user %>
-    <p>You are logged in as: <a href="/user_page"><%=current_user.full_name%></a></p>
-    <% end %>
-  </nav>
+  <header>
+    <nav class="nav_cont">
+      <p><a href="/">Home</a></p>
+      <% if current_user %>
+      <p>You are logged in as: <a href="/user_page"><%=current_user.full_name%></a></p>
+      <% end %>
+      <h1>Team VIM</h1>
+    </nav>
+</header>
 
   <%= yield %>
+
 </body>
 </html>

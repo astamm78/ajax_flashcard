@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
 
   include BCrypt
-  
+
   has_many :rounds
   has_many :decks, :through => :rounds
-  
-  validates :email, :presence => true, :format => {:with =>  /\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3}/}, 
+
+  validates :email, :presence => true, :format => {:with =>  /\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3}/},
             :uniqueness => true
   validates :password, :presence => true
   validates_length_of :password, :minimum => 5
@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   def self.authenticate(email, password)
     user = User.find_by_email(email)
-    
+
     return true if user && Password.new(user.password) == password
     false
   end
@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   def get_stats
     stats_array = []
     self.rounds.each do |round|
-      stats_array << round.results 
+      stats_array << round.results
     end
     stats_array
   end

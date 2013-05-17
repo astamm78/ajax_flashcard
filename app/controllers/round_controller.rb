@@ -1,5 +1,5 @@
 post '/question' do
-  
+
   if current_round && (current_round.deck.cards - current_round.cards).empty?
 
     @total_questions = current_round.cards.count
@@ -9,9 +9,8 @@ post '/question' do
     erb :results
   else
     @working = Deck.find_by_name(params[:decks])
-    
-    @round = current_round || Round.create( :deck_id => @working.id,
-                        :user_id => current_user.id )
+
+    @round = current_round || Round.create( :deck_id => @working.id, :user_id => current_user.id )
     session[:round_id] = @round.id
 
     @card = (@working.cards - current_round.cards).sample
