@@ -1,5 +1,5 @@
 get '/' do
-  # Look in app/views/index.erb
+  @title = "| Home"
   erb :index
 end
 

@@ -1,8 +1,10 @@
 get '/sign_in' do
+  @title = " | Sign In"
   erb :signin
 end
 
 get '/user_page' do
+  @title = " | #{current_user.full_name}"
   erb :user
 end
 
@@ -10,13 +12,18 @@ post '/sign_in' do
   if User.authenticate(params[:email], params[:password])
     @user = User.find_all_by_email(params[:email]).first
     session[:user_id] = @user.id
+    @title = " | #{current_user.full_name}"
+    erb :user
   else
-    redirect to '/sign_in'
+    @user = nil
+    @errors = "Your information doesn't match our records. Deal with it."
+    @title = " | Sign Up"
+    erb :signin
   end
-  erb :user
 end
 
 get '/sign_up' do
+  @title = " | Sign Up"
   erb :signup
 end
 
