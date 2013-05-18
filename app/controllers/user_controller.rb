@@ -1,7 +1,3 @@
-get '/sign_up' do
-  erb :signup
-end
-
 get '/sign_in' do
   erb :signin
 end
@@ -20,12 +16,23 @@ post '/sign_in' do
   erb :user
 end
 
+get '/sign_up' do
+  erb :signup
+end
+
 post '/sign_up' do
-  @user = User.create(:full_name => params[:full_name],
+  @user = User.new(:full_name => params[:full_name],
                       :email => params[:email],
                       :password => params[:password])
-  session[:user_id] = @user.id
-  erb :user
+
+  if @user.save
+    session[:user_id] = @user.id
+    erb :user
+  else
+    @user = nil
+    @errors = "Please enter your full name,<br>a proper email and a password."
+    erb :signup
+  end
 end
 
 get '/result' do

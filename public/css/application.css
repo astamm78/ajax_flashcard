@@ -21,12 +21,16 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: white;
 }
 
 .nav_cont {
   margin: 0 auto;
   width: 720px;
+}
+
+.nav-cont p a {
+  display: block;
 }
 
 .container {
@@ -36,10 +40,19 @@ a:hover {
 }
 
 .round {
+  margin: 0 auto;
+  width: 720px;
   height: 14px;
   padding: 12px;
-  position: absolute;
+  position: relative;
   top: 14px;
+}
+
+.round p {
+  float: left;
+  margin: 0 20px 0 0;
+  font-size: 14px;
+  text-align: left;
 }
 
 header p {
@@ -54,7 +67,15 @@ header h1 {
   font-size: 90px;
   color: #8D9391;
   position: relative;
-  bottom: -21px;
+  bottom: -45px;
+}
+
+header .nav-cont h1 a {
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: white;
 }
 
 .container h1 {
@@ -90,9 +111,8 @@ header h1 {
   font-size: 28px;
 }
 
-.round p {
-  font-size: 12px;
-  text-align: left;
+p.errors {
+  color: red;
 }
 
 form {

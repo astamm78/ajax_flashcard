@@ -1,9 +1,11 @@
 <div class="container">
   <p>Here's how you did, deal with it.</p>
 
-  <h3>Your answer was correct? <span class="<%= @guess.correct ? true : false %>">
-    <%= @guess.correct %>
-  </h3>
+  <h3>Your answer was correct? <%= @guess.correct %></h3>
+
+  <% if @guess.correct == false %>
+    <h3>The correct answer is:<br><%= Card.find(@guess.card_id).answer %></h3>
+  <% end %>
 
   <form id ="sign_up" action="/question" method="post">
     <input type="hidden" name="decks" value="<%=current_round.deck.name%>">

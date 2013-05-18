@@ -18,15 +18,14 @@
 
   <header>
     <nav class="nav_cont">
-      <% if current_user %>
-      <p>You are logged in as: <a href="/user_page"><%=current_user.full_name%></a></p>
-      <% end %>
-      <p><a href="/">Home</a></p>
-      <h1>Team VIM</h1>
+      <h1><a href='/'>Team VIM</a></h1>
     </nav>
   </header>
 
-  <div class="container  round">
+  <div class="round">
+    <% if current_user != nil %>
+      <p>You are logged in as: <a href="/user_page"><%=current_user.full_name%></a></p>
+    <% end %>
     <% if current_round != nil %>
       <p>The current round is: <%= current_round.id %></p>
     <% end %>
