@@ -37,3 +37,12 @@ get '/logout' do
   session[:round_id] = nil
   redirect to '/'
 end
+
+get '/quit_round' do
+  @total_questions = current_round.cards.count
+  @total_correct = current_round.guesses.where(:correct => true).count
+
+  session[:round_id] = nil
+  erb :results
+
+end

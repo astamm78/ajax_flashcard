@@ -18,13 +18,19 @@
 
   <header>
     <nav class="nav_cont">
-      <p><a href="/">Home</a></p>
       <% if current_user %>
       <p>You are logged in as: <a href="/user_page"><%=current_user.full_name%></a></p>
       <% end %>
+      <p><a href="/">Home</a></p>
       <h1>Team VIM</h1>
     </nav>
-</header>
+  </header>
+
+  <div class="container  round">
+    <% if current_round != nil %>
+      <p>The current round is: <%= current_round.id %></p>
+    <% end %>
+  </div>
 
   <%= yield %>
 

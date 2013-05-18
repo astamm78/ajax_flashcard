@@ -1,5 +1,4 @@
 <div class="container">
-  <h1>Welcome to Team Vim!</h1>
   <p>Here's how you did, deal with it.</p>
 
   <h3>Your answer was correct? <span class="<%= @guess.correct ? true : false %>">
@@ -10,5 +9,7 @@
     <input type="hidden" name="decks" value="<%=current_round.deck.name%>">
     <input type="submit" value="Next Question">
   </form>
+
+  <p><a href="/quit_round">Quit Round</a></p>
 
 </div>

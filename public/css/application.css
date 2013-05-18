@@ -35,12 +35,18 @@ a:hover {
   width: 720px;
 }
 
+.round {
+  height: 14px;
+  padding: 12px;
+  position: absolute;
+  top: 14px;
+}
+
 header p {
   float: left;
   margin: 0 24px 0 0;
   font-size: 24px;
   vertical-align: bottom;
-  height: 145px;
 }
 
 header h1 {
@@ -48,7 +54,7 @@ header h1 {
   font-size: 90px;
   color: #8D9391;
   position: relative;
-  bottom: 100px;
+  bottom: -21px;
 }
 
 .container h1 {
@@ -82,6 +88,11 @@ header h1 {
   float: left;
   margin-right: 20px;
   font-size: 28px;
+}
+
+.round p {
+  font-size: 12px;
+  text-align: left;
 }
 
 form {
