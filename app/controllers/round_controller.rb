@@ -20,16 +20,16 @@ post '/question' do
 
 end
 
-get '/question' do
-  erb :question
-end
+# get '/question' do
+#   erb :question
+# end
 
 post '/answer' do
-  # {"answer"=>"A", "card_id"=>"39"}
-  @guess = Guess.create( :card_id => params[:card_id],
-                      :guess => params[:answer],
-                      :correct => Card.find_by_id(params[:card_id]).correct?(params[:answer]),
-                      :round_id => current_round.id )
 
-  erb :answer
+  @guess = Guess.create(  :card_id => params[:card_id],
+                          :guess => params[:answer],
+                          :correct => Card.find_by_id(params[:card_id]).correct?(params[:answer]),
+                          :round_id => current_round.id )
+
+  erb :answer, :layout => false
 end

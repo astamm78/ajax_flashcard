@@ -1,17 +1,14 @@
-<div class="container">
-  <p>Here's how you did, deal with it.</p>
+<p>Here's how you did, deal with it.</p>
 
-  <h3>Your answer was correct? <%= @guess.correct %></h3>
+<h3>Your answer was correct? <%= @guess.correct %></h3>
 
-  <% if @guess.correct == false %>
-    <h3>The correct answer is:<br><%= Card.find(@guess.card_id).answer %></h3>
-  <% end %>
+<% if @guess.correct == false %>
+  <h3>The correct answer is:<br><%= Card.find(@guess.card_id).answer %></h3>
+<% end %>
 
-  <form id ="sign_up" action="/question" method="post">
-    <input type="hidden" name="decks" value="<%=current_round.deck.name%>">
-    <input type="submit" value="Next Question">
-  </form>
+<form style="display:none" name ="next_question" action="/question" method="post">
+  <input type="hidden" name="decks" value="<%=current_round.deck.name%>">
+  <input type="submit" name="new_question" value="Next Question">
+</form>
 
-  <p><a href="/quit_round">Quit Round</a></p>
-
-</div>
+<p><a href="/quit_round">Quit Round</a></p>
